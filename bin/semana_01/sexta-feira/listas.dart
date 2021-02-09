@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 void main() {
@@ -133,4 +134,46 @@ void main() {
   var soma = notas.map((nota) => nota * 2).reduce((soma, nota) => soma + nota) /
       notas.length;
   print(soma);
+
+  /*
+
+  // ## atividade ##
+  // criar uma lista de notas (double)
+  // fazer um for 1 até 10
+  // a cada iteração adicionar a nota na lista (entrada do usuário)
+  // descubra a média das notas
+  // printar no terminal as notas que forem maior do que 7
+  // printar no terminal a média das turma
+  // mostrar a a pior nota e a melhor nota
+
+  // map, reduce
+
+  var notas = <double>[];
+
+  for (var i = 0; i < 10; i++) {
+    print('Nota ${i + 1}: ');
+    notas.add(double.tryParse(stdin.readLineSync()) ?? 0);
+  }
+
+  var media = notas.fold(0, (soma, nota) => soma + nota) / notas.length;
+
+  var maiorNota = notas.reduce((maior, nota) {
+    if (nota > maior) return nota;
+
+    return maior;
+  });
+
+  notas.sort();
+
+  var menorNota = notas.first;
+  var maiorNotaOrd = notas.last;
+
+  print('Média da turma: $media');
+  print('Maior nota: $maiorNota');
+  print('Maior nota ord.: $maiorNotaOrd');
+  print('Menor nota: $menorNota');
+
+  print('Notas > 7:  ${notas.where((nota) => nota >= 7)}');
+
+  */
 }
