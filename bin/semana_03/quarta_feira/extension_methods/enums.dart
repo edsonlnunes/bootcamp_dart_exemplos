@@ -1,0 +1,1 @@
+enum EStatus { APROVADO, REPROVADO, NAO_DEFINIDO }
